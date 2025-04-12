@@ -10,5 +10,9 @@ int main() {
     std::cout << number.size() << std::endl;
     std::cout << number.capacity() << std::endl;
 
+    number.shrink_to_fit();
+    std::cout << number.size() << std::endl;
+    std::cout << number.capacity() << std::endl;
+
     std::cout << number[0] << std::endl;
 }
