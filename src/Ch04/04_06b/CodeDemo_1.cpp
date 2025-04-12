@@ -2,7 +2,7 @@
 #include <vector>
 
 int main() {
-    std::vector <int> number = {1, 2, 3, 4};
+    std::vector <int> number = {1, 2, 3};
     std::cout << number.size() << std::endl;
     std::cout << number.capacity() << std::endl;
 
