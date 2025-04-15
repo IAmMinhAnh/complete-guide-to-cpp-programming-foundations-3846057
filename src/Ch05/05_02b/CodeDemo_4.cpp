@@ -2,13 +2,38 @@
 #include <string>
 
 int main() {
-    int score = 75;
-    int bonus = 10;
+    float operand_1, operand_2, result;
+    char operation;
 
-    std::string result = (score > 80)? "Excellent" : (score > 60)? ((score + bonus > 70)? "Good":"Average") : "Poor";
+    std::cout << "Enter operand 1: " << std::flush;
+    std::cin >> operand_1;
 
-    std::cout << "Result: " << result << std::endl;
-    
+    std::cout << "Enter operand 2: " << std::flush;
+    std::cin >> operand_2;
+
+    std::cout << "Choose operation [ + - * /]: " << std::flush;
+    std::cin >> operation;
+
+    switch (operation) {
+        case '+':
+            result = operand_1 + operand_2;
+            break;
+        case '-':
+            result = operand_1 - operand_2;
+            break;
+        case '*':
+            result = operand_1 * operand_2;
+            break;
+        case '/':
+            result = operand_1 / operand_2;
+            break;
+        default:
+            result = operand_1 + operand_2;
+            break;
+    }
+
+    std::cout << "The result is " << result << std::endl;
+
     std::cout << std::endl << std::endl;
     return 0;
 }
